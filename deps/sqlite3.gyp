@@ -60,7 +60,7 @@
       },
       'OS == "mac"', {
         'variables': {
-          'openssl_root%': '/usr/local/opt/openssl'
+          'openssl_root%': '/usr/local/opt/openssl@1.1'
         },
         'link_settings': {
           'libraries': [
@@ -156,8 +156,7 @@
         ],
         'defines': [
           'SQLITE_THREADSAFE=1',
-          'SQLITE_ENABLE_FTS3',
-          'SQLITE_ENABLE_FTS4',
+          'HAVE_USLEEP=1',
           'SQLITE_ENABLE_FTS5',
           'SQLITE_ENABLE_JSON1',
           'SQLITE_ENABLE_RTREE',
@@ -172,8 +171,7 @@
       'defines': [
         '_REENTRANT=1',
         'SQLITE_THREADSAFE=1',
-        'SQLITE_ENABLE_FTS3',
-        'SQLITE_ENABLE_FTS4',
+        'HAVE_USLEEP=1',
         'SQLITE_ENABLE_FTS5',
         'SQLITE_ENABLE_JSON1',
         'SQLITE_ENABLE_RTREE',
